@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Computer Science - QAU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #nav-toggle:checked ~ aside {
+        right: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-segoe-ui text-black">
+    <input type="checkbox" id="nav-toggle" class="hidden" />
+
+    <section
+      class="relative h-[300px] bg-cover bg-center bg-no-repeat text-white text-center flex items-center justify-center"
+      style="background-image: url('dep-img1.jpeg')"
+    >
+      <div
+        class="absolute top-0 left-0 h-full w-full bg-[rgba(0,30,40,0.65)] z-[1]"
+      ></div>
+      <div class="z-[2]">
+        <h1
+          class="text-[28px] font-extrabold drop-shadow-[1px_2px_8px_rgba(0,0,0,0.7)]"
+        >
+          Department of Computer Science
+        </h1>
+        <h2 class="text-[16px] mt-[6px] text-teal-100">
+          Quaid-i-Azam University, Islamabad
+        </h2>
+        <label
+          for="nav-toggle"
+          class="absolute top-4 right-5 text-white text-[28px] cursor-pointer block md:hidden"
+          >&#9776;</label
+        >
+      </div>
+    </section>
+
+    <aside
+      class="fixed top-0 right-[-100%] w-full h-screen bg-[#0a1f44] text-white flex flex-col p-5 z-[99] transition-all duration-[800ms] ease-in-out"
+      id="sidebar"
+    >
+      <label
+        for="nav-toggle"
+        class="text-[28px] ml-auto cursor-pointer p-2 text-white"
+        >&times;</label
+      >
+      <nav class="flex flex-col mt-10 gap-5">
+        <a
+          href="index.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Home</a
+        >
+        <a
+          href="academics.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Academics</a
+        >
+        <a
+          href="research.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Research</a
+        >
+        <a
+          href="fundedProjects.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Funded Projects</a
+        >
+        <a
+          href="admissions.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Admissions</a
+        >
+        <a
+          href="faculty.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Faculty</a
+        >
+        <a
+          href="https://gdg.community.dev/quaid-i-azam-university/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Google GDSC</a
+        >
+        <a
+          href="https://jobs.qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Jobs</a
+        >
+        <a
+          href="http://alumni.cs.qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Alumni</a
+        >
+        <a
+          href="https://qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >QAU</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Contact Us</a
+        >
+      </nav>
+    </aside>
+
+    <header class="bg-[#0a1f44] py-2 px-5 hidden md:block">
+      <nav class="flex flex-wrap justify-center gap-x-4 gap-y-0">
+        <a
+          href="index.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Home</a
+        >
+        <a
+          href="academics.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Academics</a
+        >
+        <a
+          href="research.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Research</a
+        >
+        <a
+          href="fundedProjects.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Funded Projects</a
+        >
+        <a
+          href="admissions.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Admissions</a
+        >
+        <a
+          href="faculty.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Faculty</a
+        >
+        <a
+          href="https://gdg.community.dev/quaid-i-azam-university/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Google GDSC</a
+        >
+        <a
+          href="https://jobs.qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Jobs</a
+        >
+        <a
+          href="http://alumni.cs.qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Alumni</a
+        >
+        <a
+          href="https://qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >QAU</a
+        >
+        <a
+          href="contact.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Contact Us</a
+        >
+      </nav>
+    </header>
+    <main class="max-w-4xl mx-auto px-5 py-16 bg-gray-50 font-sans">
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold text-emerald-600 mb-4">
+          MS (Data Science)
+        </h2>
+        <p class="text-base text-gray-800 leading-relaxed">
+          Data Science has become an important due to the need for analyzing and
+          understanding ever increasing data generated by a multitude of
+          sources. By getting admission in the MS programme applicants will not
+          only improve their qualifications but will also be equipped with the
+          latest knowledge in the field. The students will be exposed to
+          different aspects of data science including programming, data
+          structures, and algorithms for data science, data analysis and
+          visualization, and big data analytics. These aspects will provide the
+          students the opportunities to effectively work in local and
+          international markets as well as to pursue a PhD degree in data
+          science.
+        </p>
+      </section>
+
+      <div
+        class="bg-white border-l-4 border-emerald-500 rounded-lg shadow-md p-6 mb-6 transition-shadow hover:shadow-lg"
+      >
+        <h3 class="text-lg font-bold text-blue-900 mb-3">
+          MS (Data Science) Part Time
+        </h3>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Quaid-i-Azam University is keen to serve the community and is
+          providing an opportunity to those who are working in the related
+          fields and may not be able to attend a full time post graduate
+          programme. Classes will be held in the evening after 5pm. By getting
+          admission in the programme applicants will not only improve their
+          qualifications but will be equipped with the latest knowledge and
+          techniques in the field of information studies.
+        </p>
+      </div>
+
+      <div
+        class="bg-white border-l-4 border-emerald-500 rounded-lg shadow-md p-6 mb-6 transition-shadow hover:shadow-lg"
+      >
+        <h3 class="text-lg font-bold text-blue-900 mb-3">
+          Programme Objectives
+        </h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm text-gray-800">
+          <li>
+            Analyze and solve problems related to data for local and
+            international markets
+          </li>
+          <li>
+            Effectively use appropriate techniques and tools used in data
+            science
+          </li>
+          <li>
+            Learn state of the art technologies associated with data science
+          </li>
+          <li>Pursue a PhD degree in data science or associated disciplines</li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-white border-l-4 border-emerald-500 rounded-lg shadow-md p-6 mb-6 transition-shadow hover:shadow-lg"
+      >
+        <h3 class="text-lg font-bold text-blue-900 mb-3">Eligibility</h3>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Students must have completed 16 years of education, either BS (4
+          years) or MSc in computing related disciplines.
+        </p>
+      </div>
+
+      <div
+        class="bg-white border-l-4 border-emerald-500 rounded-lg shadow-md p-6 transition-shadow hover:shadow-lg"
+      >
+        <h3 class="text-lg font-bold text-blue-900 mb-3">
+          Programme Structure
+        </h3>
+        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+          MS programme consists of 30 credit hours. Each course is of 3 credit
+          hours and there are 2 compulsory courses and a number of optional
+          courses.
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-sm text-gray-800">
+          <li>
+            24 credit hours for the course work and 6 credit hours for
+            project/thesis
+          </li>
+          <li>30 credit hours for the course work</li>
+        </ul>
+      </div>
+    </main>
+
+    <section class="max-w-5xl mx-auto mt-16 px-5">
+      <h2
+        class="text-xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2"
+      >
+        Compulsory Courses
+      </h2>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-605: Programming for Data Science
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Problem solving for data science, programming constructs, data
+          structures (lists, sets, tuples, dictionaries), working with different
+          types of data (tabular, semi-structured, unstructured), data wrangling
+          (understanding data, transforming and structuring data, data cleaning,
+          data enrichment, data validation), introduction to data analytics,
+          data visualization basics.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-606: Data Science Algorithms
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Probability spaces, random variables, multivariate random variables,
+          expectation, convergence, statistical models, estimation, hypothesis
+          testing, Bayesian methods, linear regression, logistic regression,
+          applications of probability and statistics in data science, applied
+          data science case-studies.
+        </p>
+      </details>
+
+      <h2
+        class="text-xl font-bold text-blue-900 mt-10 mb-6 border-b-2 border-gray-200 pb-2"
+      >
+        Optional Courses
+      </h2>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-632: Advanced Web Development
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Essentials of web development; JavaScript: basic concepts, synchronous
+          and asynchronous programming, event loop, callback hells and promises;
+          Server Side Scripting: Introduction, Backend architecture, REPL
+          (Read-Eval-Print-Loop), server-side modules, synchronous and
+          asynchronous CRUD (Create, Read, Update, Delete) operations; Data
+          Handling; API Development: RESTful APIs, GraphQL, API testing;
+          Middleware; Template engines; Databases: connecting backend with
+          databases; Front-end Frameworks; Styling in frontend frameworks; State
+          management; Frontend API access; Frontend state management.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-653: Natural Language Processing
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Introduction to natural language processing, applications of NLP,
+          regular expressions, regular expressions in NLP, text normalization,
+          language modeling with n-grams, Naïve bayes classification and
+          sentiment, POS tagging and HMM, Viterbi algorithm, CFGs and PCFGs,
+          semantic analysis, text classification and evaluation, topic modeling,
+          opinion mining, information extraction, named entity recognition,
+          information retrieval, word sense disambiguation, question answering,
+          dialog systems, Coreference resolution, text summarization, text
+          alignment, language translation, latent semantic indexing,
+          dimensionality reduction.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-660: Research Methods
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Overview of computer science sub-areas, Introduction to research
+          methods. The objectives and dimensions of research. Tools of research.
+          Key research areas of interest. The research problems: Finding a
+          problem, stating the problem, identifying sub-problems. Review of
+          related literature: Survey paper presentation. Planning the research
+          project. The scientific method, Research planning, Data analysis and
+          Statistical Methods. Conducting research in computer science. Proposal
+          presentation. Research methodology: Quantitative and qualitative
+          approach.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-665: Cloud Computing
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Introduction to Cloud Computing; Virtualization; Cloud Stack;
+          Infrastructure as a Service (IaaS); Platform as a Service (PaaS);
+          Software as a Service (SaaS); Cloud Computing Platforms; Distributed
+          Storage Systems; Parallel Programming in the Cloud; Mobile Cloud
+          Computing; Cloudlets; Commercial Cloud Computing Platforms.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-672: e-Government
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Introduction to the Course; Overview of trends driving the development
+          of Government/Non-Profit web Site and Analysis; Citizen Centric Web
+          Design; Overview of Key of e-government Practices and applications:
+          Citizen to Government, Business to Government, Government to
+          Government; Policy Issues in e-government: Public Access & Government
+          Transparency, Privacy and Security Issues; IT Management for
+          Governments and Non-profits.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-673: Multimedia Technology
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Multimedia: Image acquisition and manipulation; Still Imaging; 3D &
+          Animation: Moving image creation and manipulation; Video: acquisition
+          and manipulation; Audio: acquisition and manipulation; Multimedia
+          Platforms: Unix/SG, PC, Mac, Linux; Convergence, Internet &
+          Interactive Media; Technical Issues and future trends.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-675: Information Retrieval Systems
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Structure of IR Systems; Vector Space Models; Language Models;
+          Evidence from Behavior; Evidence from Metadata; User Interaction;
+          Indexing; Cross-Language Retrieval; Document Image Retrieval; Speech
+          and Music retrieval; Photograph and Video Retrieval.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-731: Optimization Methods for Data Science
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Linear optimization; unconstrained nonlinear optimization; nonlinear
+          optimization algorithms; linear regression; nonlinear regression;
+          logistic regression; numerical solution for linear systems; stochastic
+          gradient descent; constrained nonlinear optimization; quadratic
+          programs; application of optimization methods in data science.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-741: Computer Vision
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Computer vision, geometric primitives and 2D transformations, image
+          processing and filtering, Camera model, Convolution, feature
+          detection, matching, model fitting, object recognition, supervised
+          learning, linear classifiers, neural networks and convolution neural
+          network, their applications in objection detection and localization,
+          stereo, optical flow and tracking.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-742: Internet of Things
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Introduction to the Internet of Things; IoT and its importance;
+          Elements of an IoT ecosystem; Technology and business driver; IoT
+          applications, trends and implications; Basics of Networking;
+          Understanding the abstraction of layers; TCP/IP protocols stack; SDN
+          Architecture; Control and Management plane improvements with SDN;
+          Network Automation and Virtualization; Arduino and Raspberry Pi;
+          Sensors and sensor nodes; Sensing components and devices; Sensor
+          modules, nodes, motes and systems; Connectivity and networks; Wireless
+          technologies for the IoT; Edge connectivity and protocols; IoT
+          exercises; Local processing on the sensor nodes; Connecting devices at
+          the edge and to the cloud; Processing data offline and in the cloud.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-772: Data Mining
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          The data mining process, Data preprocessing: Cleaning, Transformation,
+          Reduction. Data warehousing: Multidimensional data modeling, OLAP.
+          Classification: Bayesian, Decision tree. Prediction, Mining
+          association rules: Association rules and types, Interestingness
+          measures, multidimensional rules, Apriori algorithm. Cluster analysis:
+          Partitional, Hierarchical, Density based. Mining complex data.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-775: Digital Libraries
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Introduction to digital libraries; A brief history of Digital Library
+          development.; Planning a Digital Library; Presenting documents;
+          Digital Document Formats: Markup and Metadata; Metadata standards;
+          Interoperability; Digital Preservation, new media; Case Studies of
+          Digital Libraries; Research Issues in Digital Libraries.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-781: Content based Information Retrieval
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Introduction to multimedia content (i.e., text, audio, image, and
+          video objects); multiple modalities of information (i.e., textual,
+          acoustic, and visual); web and multimedia contents; indexing and
+          retrieval of various types of multimedia-based content; multimedia
+          content descriptors and feature sets; multimedia content modeling;
+          structured and semi-structured data models; Content based indexing and
+          retrieval models; CBIR architectures; multimedia information retrieval
+          and ranking; content-based web search; CBIR evaluation; emerging trend
+          in CBIR.
+        </p>
+      </details>
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-787: Special Topics in Data Science
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Latest trends in data science; state of the art research in data
+          science; data science case-studies; Topics which are not covered in
+          other courses;
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-815: Neural Information Retrieval
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Information retrieval fundamentals, evaluation, word embeddings,
+          language modeling (Word2Vec, FastText), query expansion, neural
+          network methods in NLP, CNNs, RNNs, LSTM, attention, Transformer,
+          BERT, neural re-ranking (KNRM, BERT re-ranking), dense retrieval,
+          knowledge distillation (DistilBERT), and recommender systems.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-816: Medical Image Analysis
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Medical imaging modalities: MRI, CT, X-ray, ultrasound; preprocessing
+          and enhancement; segmentation and registration; ML/DL for
+          classification and diagnosis; CAD systems and performance evaluation.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-817: Transfer Learning and Applications
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Transfer learning foundations, feature extraction, fine-tuning,
+          self-supervised and multi-task learning, domain adaptation,
+          transformer-based NLP, applications in CV/NLP, meta-learning,
+          few-shot, and lifelong learning.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-818: Advanced Computer Vision
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Image enhancement, segmentation, CNN-based object detection, 3D
+          recognition, video tracking, GANs, attention mechanisms, and
+          domain-specific applications (e.g., robotics, healthcare, autonomous
+          driving).
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-819: Machine Learning for Software Engineering
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          ML/DL models in SE: requirements tracing, defect prediction, effort
+          estimation, code summarization, embeddings, pretrained models,
+          challenges, and evaluation approaches in SE automation.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-823: Data Warehousing
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Architecture, ETL, OLAP support, active and semantic warehousing,
+          vendor solutions (Oracle, Teradata), hot vs cold data, cleansing, and
+          mining integration.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-825: Machine Learning
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Decision trees, neural networks (backpropagation), Bayesian learning,
+          KNN, PAC theory, VC dimension, clustering, and hypothesis evaluation
+          in both supervised and unsupervised learning.
+        </p>
+      </details>
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-826: Pattern Recognition
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Overview of pattern recognition, Bayesian Decision Theory,
+          discriminant functions, Gaussian distribution, MLE, dimensionality
+          challenges, PCA, Fisher Linear Discriminant, Parzen windows, and K-NN
+          estimation.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-827: Social Network Analysis
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Network models, centrality, clustering, community detection,
+          small-world networks, diffusion, opinion dynamics, social media
+          analysis.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-828: Computational Modeling
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Modeling processes, Monte Carlo methods, Markov models, Queuing
+          theory, system dynamics, game theory, BDI agents,
+          verification/validation, and social simulation.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-829: Social Media Mining
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Social media data collection, trend/fraud detection, fake profile
+          analysis, governance/political data, privacy and ethical concerns.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-8XX: Advanced Social Network Analysis
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Dynamic and multiplex networks, centrality, resilience, information
+          diffusion, failure modes, and trends in social network analysis.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-838: Recommender Systems
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Collaborative, content-based, hybrid, trust-aware, time-sensitive, and
+          multi-criteria recommenders; evaluation metrics and next-gen web
+          integration.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-839: Information Cryptography
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Symmetric/asymmetric encryption, block/stream ciphers, cryptanalysis
+          techniques, secure computation, public key infrastructure, and
+          post-quantum cryptographic models like Merkle–Hellman, Shor’s
+          algorithm, and digital signatures.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-841: Metadata for Information Resources
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Metadata history, structure, interoperability, encoding standards
+          (RDF, DTD), vocabularies, educational/visual metadata, evaluation, and
+          use cases in museums and archives (CDWA, TEI, GEM, GILS).
+        </p>
+      </details>
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-845: Deep Learning
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Review of Neural Networks, activation functions, multilayer deep
+          networks, CNNs, RNNs, LSTM, image captioning, RBMs, Autoencoders, and
+          case studies.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-846: Probabilistic Graphical Models
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Bayesian Networks, Factor Graphs, exact/approximate inference,
+          structural learning, and causality in temporal models.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-84X: Advanced Natural Language Processing
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Sequence modeling, constituency and dependency parsing, transformers,
+          NLG, pretrained language models, and advanced NLP topics.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-847: High Performance Computing
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Introduction to HPC, interconnection networks, OpenMP, MPI, parallel
+          algorithms, and cache coherence.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-848: Big Data Analytics
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          NoSQL, Hadoop, Spark, Bloom filters, stream processing, SPARQL, Neo4j,
+          and data visualization libraries.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-849: Data Governance
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Data lifecycle, privacy, governance tools, cloud policies, quality
+          control, streaming governance, and monitoring.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-861: Information Visualization and Presentation
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Graph types, multidimensional visualizations, interaction design,
+          critique of visuals, networks, 3D graphics, and research trends.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-871: Digital Preservation
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Digital curation, media obsolescence, legal benefits, metadata, OAIS
+          models, preservation approaches, and certifications.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-881: Visual Analytics
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Critical thinking, mental models, visual encoding, storytelling,
+          communication, collaborative analytics, and system evaluations.
+        </p>
+      </details>
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-882: Distributed Networks Analysis
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Overview of distributed systems, optimization tools for planning and
+          simulation, mutual exclusion, election, deadlock, architectural
+          models, file systems, concurrency, encryption, system scheduling,
+          transaction management, and advanced queuing networks.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-883: Network Performance Evaluation
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          System modeling, data presentation, workload characterization, network
+          traffic simulation tools, queuing models (M/M/1, M/G/1, etc.),
+          performance evaluation, protocol design, stochastic processes, and
+          Markov models.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-885: Deep Learning on Graphs
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Introduction to graphs and deep learning, node and graph embeddings,
+          GNNs (message passing, GCNs, GATs, autoencoders), graph transformers,
+          GNN scalability, and applications including link prediction and
+          community detection.
+        </p>
+      </details>
+
+      <details
+        class="mb-4 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+      >
+        <summary
+          class="cursor-pointer list-none px-5 py-4 text-blue-900 font-semibold text-base relative"
+        >
+          DSC-780: Thesis (6 credit hours)
+          <span
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm"
+            >▸</span
+          >
+        </summary>
+        <p class="text-sm text-gray-700 px-5 pb-5 pt-2 leading-relaxed">
+          Description not provided.
+        </p>
+      </details>
+
+      <div
+        class="bg-white border-l-4 border-emerald-500 rounded-lg p-6 shadow-md mb-6 hover:shadow-lg transition-shadow duration-300"
+      >
+        <h3 class="text-blue-900 font-bold text-lg mb-4">
+          Deficiency Courses for Student from Non-Computing Backgrounds
+        </h3>
+        <ul class="list-disc list-inside text-gray-800 text-sm mb-4 space-y-1">
+          <li>CS 105: Programming and Problem Solving</li>
+          <li>CS 211: Data Structures</li>
+          <li>CS 225: Database Systems</li>
+        </ul>
+        <p class="text-sm">
+          <a
+            href="https://qau.edu.pk/ms-information-sciences-technology/"
+            class="text-emerald-500 font-semibold hover:text-green-800 hover:underline transition-colors duration-300"
+          >
+            Click here to see details about the fee structure
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="bg-gray-100 py-10 px-5 border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.06)]"
+    >
+      <div class="max-w-[1200px] mx-auto flex flex-wrap justify-between gap-10">
+        <div class="flex-grow flex-shrink basis-[300px]">
+          <h3 class="text-[18px] font-bold text-[#0a1f44] mb-4">
+            Useful links
+          </h3>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <a
+              href="https://qau.edu.pk/"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              QAU
+            </a>
+            <a
+              href="admissions.html"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              Admissions
+            </a>
+            <a
+              href="contact.html"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              Contact
+            </a>
+          </div>
+          <address class="not-italic text-sm text-[#0a1f44] leading-relaxed">
+            <strong>Department of Computer Sciences,</strong><br />
+            Quaid-i-Azam University,<br />
+            Islamabad, 45320, Pakistan<br />
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+
+        <div class="flex-grow flex-shrink basis-[300px]">
+          <h3 class="text-[18px] font-bold text-[#0a1f44] mb-4">
+            Our Programs
+          </h3>
+          <ul>
+            <li class="mb-2">
+              <a
+                href="phd.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                PhD (Computer Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="ms.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MS (Information Science & Technology)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="mphil.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MPhil (Computer Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="ms-data.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MS (Data Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="bs.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                BS (Computer Science)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-[#047857] text-white text-center py-3 px-2 text-[16px]">
+      <p>2025 &copy Department of Computer Sciences, QAU, Islamabad</p>
+    </footer>
+  </body>
+</html>

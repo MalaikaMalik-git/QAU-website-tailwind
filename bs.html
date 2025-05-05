@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Computer Science - QAU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #nav-toggle:checked ~ aside {
+        right: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-segoe-ui text-black">
+    <input type="checkbox" id="nav-toggle" class="hidden" />
+
+    <section
+      class="relative h-[300px] bg-cover bg-center bg-no-repeat text-white text-center flex items-center justify-center"
+      style="background-image: url('dep-img1.jpeg')"
+    >
+      <div
+        class="absolute top-0 left-0 h-full w-full bg-[rgba(0,30,40,0.65)] z-[1]"
+      ></div>
+      <div class="z-[2]">
+        <h1
+          class="text-[28px] font-extrabold drop-shadow-[1px_2px_8px_rgba(0,0,0,0.7)]"
+        >
+          Department of Computer Science
+        </h1>
+        <h2 class="text-[16px] mt-[6px] text-teal-100">
+          Quaid-i-Azam University, Islamabad
+        </h2>
+        <label
+          for="nav-toggle"
+          class="absolute top-4 right-5 text-white text-[28px] cursor-pointer block md:hidden"
+          >&#9776;</label
+        >
+      </div>
+    </section>
+
+    <aside
+      class="fixed top-0 right-[-100%] w-full h-screen bg-[#0a1f44] text-white flex flex-col p-5 z-[99] transition-all duration-[800ms] ease-in-out"
+      id="sidebar"
+    >
+      <label
+        for="nav-toggle"
+        class="text-[28px] ml-auto cursor-pointer p-2 text-white"
+        >&times;</label
+      >
+      <nav class="flex flex-col mt-10 gap-5">
+        <a
+          href="index.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Home</a
+        >
+        <a
+          href="academics.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Academics</a
+        >
+        <a
+          href="research.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Research</a
+        >
+        <a
+          href="fundedProjects.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Funded Projects</a
+        >
+        <a
+          href="admissions.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Admissions</a
+        >
+        <a
+          href="faculty.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Faculty</a
+        >
+        <a
+          href="https://gdg.community.dev/quaid-i-azam-university/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Google GDSC</a
+        >
+        <a
+          href="https://jobs.qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Jobs</a
+        >
+        <a
+          href="http://alumni.cs.qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Alumni</a
+        >
+        <a
+          href="https://qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >QAU</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Contact Us</a
+        >
+      </nav>
+    </aside>
+
+    <header class="bg-[#0a1f44] py-2 px-5 hidden md:block">
+      <nav class="flex flex-wrap justify-center gap-x-4 gap-y-0">
+        <a
+          href="index.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Home</a
+        >
+        <a
+          href="academics.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Academics</a
+        >
+        <a
+          href="research.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Research</a
+        >
+        <a
+          href="fundedProjects.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Funded Projects</a
+        >
+        <a
+          href="admissions.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Admissions</a
+        >
+        <a
+          href="faculty.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Faculty</a
+        >
+        <a
+          href="https://gdg.community.dev/quaid-i-azam-university/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Google GDSC</a
+        >
+        <a
+          href="https://jobs.qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Jobs</a
+        >
+        <a
+          href="http://alumni.cs.qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Alumni</a
+        >
+        <a
+          href="https://qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >QAU</a
+        >
+        <a
+          href="contact.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Contact Us</a
+        >
+      </nav>
+    </header>
+    <main class="px-5 py-10 bg-gray-50 max-w-[1000px] mx-auto">
+      <section class="mb-10">
+        <h2 class="text-[28px] font-bold text-emerald-500 mb-4">
+          Introduction
+        </h2>
+        <p class="text-[16px] leading-relaxed text-[#1f2937]">
+          The BS Computer Science program at QAU was started in 2013. It
+          provides a well-integrated balance of theoretical and practical
+          knowledge required for developing reliable and usable software tools
+          for different fields. The program enables students to design,
+          implement and manage systems combining scientific, computational,
+          communication and multimedia facilities in different domains. The BS
+          program is accredited by National Computing Education Accreditation
+          Council.
+        </p>
+      </section>
+
+      <div
+        class="bg-white border-l-4 border-emerald-500 rounded-lg p-6 shadow-md hover:shadow-lg transition mb-8"
+      >
+        <h3 class="text-[#0a1f44] font-bold text-[19px] mb-4">
+          BS Program Structure
+        </h3>
+        <p class="text-[15.5px] mt-3">
+          During the B.S. students will be informed through research expertise
+          of the faculty about the current and future issues affecting the usage
+          and development of computer-based systems. Initially students learn
+          basics of computing discipline through foundation courses and will
+          build their knowledge of the discipline through core courses. In the
+          last four semesters students will extend their knowledge in a focus
+          area of their choice through elective courses. The final year
+          compulsory project will give students the opportunity to consolidate
+          and demonstrate the knowledge and skills gained from the entire course
+          material.
+        </p>
+      </div>
+
+      <div
+        class="bg-white border-l-4 border-emerald-500 rounded-lg p-6 shadow-md hover:shadow-lg transition mb-8"
+      >
+        <h3 class="text-[#0a1f44] font-bold text-[19px] mb-4">Focus Areas</h3>
+        <ul class="list-disc pl-5 mt-2 mb-5 text-[#5e5b00] text-[15.5px]">
+          <li>Artificial Intelligence</li>
+          <li>Data Science</li>
+          <li>Software Engineering</li>
+          <li>Human Centered Computing</li>
+          <li>Information Systems</li>
+          <li>Networks and Security</li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-white border-l-4 border-emerald-500 rounded-lg p-6 shadow-md hover:shadow-lg transition mb-8"
+      >
+        <h3 class="text-[#0a1f44] font-bold text-[19px] mb-4">
+          Courses Overview
+        </h3>
+        <p class="text-[15.5px] mb-4">
+          The BS program consists of eight semesters spread across four years.
+          Each semester has 15 to 18 credit hours. A total of 130 credit hours
+          must be completed. The courses are categorized as follows:
+        </p>
+        <ul class="list-disc pl-5 mt-2 mb-5 text-[#5e5b00] text-[15.5px]">
+          <li>
+            <strong>Computing Core:</strong> Core computing concepts including
+            AI, Data Science, Software Engineering, etc.
+          </li>
+          <li><strong>Domain Core:</strong> Theoretical foundations of CS.</li>
+          <li>
+            <strong>Domain Elective:</strong> Specialization courses offered in
+            last four semesters like AI, Deep Learning, Web Dev, etc.
+          </li>
+          <li>
+            <strong>Maths and Supporting:</strong> Mathematical and statistical
+            fundamentals.
+          </li>
+          <li>
+            <strong>Elective Supporting:</strong> Social and management
+            sciences.
+          </li>
+          <li>
+            <strong>General Education:</strong> Non-CS subjects like English,
+            Mathematics, Physics, Ethics, etc.
+          </li>
+        </ul>
+      </div>
+
+      <section
+        class="bg-white border-l-4 border-emerald-500 rounded-lg p-6 shadow-md hover:shadow-lg transition mb-8"
+      >
+        <h3 class="text-[#0a1f44] font-bold text-[19px] mb-4">
+          Schemes of Study
+        </h3>
+        <p class="font-semibold text-[15.5px] text-green-600 mb-2">
+          <a
+            href="https://cs.qau.edu.pk/doc/scheme-2023.pdf"
+            class="hover:text-[#065f46] underline"
+            >Fall 2023 onwards</a
+          >
+        </p>
+        <p class="font-semibold text-[15.5px] text-green-600">
+          <a
+            href="https://cs.qau.edu.pk/doc/scheme-2021.pdf"
+            class="hover:text-[#065f46] underline"
+            >Fall 2021 onwards</a
+          >
+        </p>
+      </section>
+
+      <section
+        class="bg-white border-l-4 border-emerald-500 rounded-lg p-6 shadow-md hover:shadow-lg transition mb-8"
+      >
+        <h3 class="text-[#0a1f44] font-bold text-[19px] mb-4">
+          List of Elective Courses
+        </h3>
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-bold text-[17px] mt-6 mb-2 text-[#111]">
+              Artificial Intelligence
+            </h4>
+            <ul class="list-disc pl-5 text-[#5e5b00] text-[15.5px] space-y-2">
+              <li>CSC-351: AI Assisted Programming</li>
+              <li>CSC-425: Introduction to Computer Vision</li>
+              <li>CSC-444: Knowledge Based Systems</li>
+              <li>CSC-447: Neural Networks</li>
+              <li>CSC-455: Introduction to Natural Language Processing</li>
+              <li>CSC-458: Introduction to Data Mining</li>
+              <li>CSC-459: Introduction to Machine learning</li>
+              <li>CSC-460: Introduction to Deep Learning</li>
+              <li>CSC-464: Modeling and Simulation</li>
+              <li>CSC-480: Selected topic in CS</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-[17px] mt-6 mb-2 text-[#111]">
+              Data Science
+            </h4>
+            <ul class="list-disc pl-5 text-[#5e5b00] text-[15.5px] space-y-2">
+              <li>CSC-431: Introduction to Recommender Systems</li>
+              <li>CSC-451: Introduction to Social Computing</li>
+              <li>CSC-454: Introduction to Semantic Web</li>
+              <li>CSC-455: Introduction to Natural Language Processing</li>
+              <li>CSC-458: Introduction to Data Mining</li>
+              <li>CSC-459: Introduction to Machine learning</li>
+              <li>CSC-460: Introduction to Deep Learning</li>
+              <li>CSC-466: Digital Image Processing</li>
+              <li>CSC-479: Web Information Retrieval</li>
+              <li>CSC-480: Selected topic in CS</li>
+              <li>CSC-521: Introduction to Data Science</li>
+              <li>CSC-522: Introduction to Big Data Analytics</li>
+              <li>CSC-531: Parallel and Distributed Computing</li>
+              <li>CSC-535: Cloud DevOps</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-[17px] mt-6 mb-2 text-[#111]">
+              Software Engineering
+            </h4>
+            <ul class="list-disc pl-5 text-[#5e5b00] text-[15.5px] space-y-2">
+              <li>CSC-324: Web Application Development</li>
+              <li>
+                CSC-355: Creative Programming for Interactive Apps and
+                Generative Art
+              </li>
+              <li>CSC-417: Software Interaction Design</li>
+              <li>CSC-421: Professional Practices</li>
+              <li>CSC-471: Theory of Programming</li>
+              <li>CSC-472: Information Interfaces</li>
+              <li>CSC-474: Software testing techniques</li>
+              <li>CSC-475: Emerging Trends in Software Development</li>
+              <li>CSC-476: Enterprise Information</li>
+              <li>CSC-480: Selected topic in CS</li>
+              <li>CSC-482: Web Engineering</li>
+              <li>
+                CSC-483: Software Quality Assurance (Pre-Requisite CSC-322: SC)
+              </li>
+              <li>CSC-484: Software Engineering</li>
+              <li>
+                CSC-486: Software Project Management (Pre-Requisite CSC-322: SC)
+              </li>
+              <li>CSC-487: Formal Methods for Software Engineering</li>
+              <li>CSC-488: Software Entrepreneurship</li>
+              <li>CSC-491: Real Time Systems</li>
+              <li>CSC-497: Computing Case Studies</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-[17px] mt-6 mb-2 text-[#111]">
+              Human Centered Computing
+            </h4>
+            <ul class="list-disc pl-5 text-[#5e5b00] text-[15.5px] space-y-2">
+              <li>CSC-417: Software Interaction Design</li>
+              <li>CSC-431: Introduction to Recommender Systems</li>
+              <li>CSC-432: Information Retrieval Exploration</li>
+              <li>CSC-472: Information Interfaces</li>
+              <li>CSC-473: Multimedia Applications and Design</li>
+              <li>CSC-477: Interactive Application Design</li>
+              <li>CSC-480: Selected topic in CS</li>
+              <li>CSC-481: Rapid Interaction Design</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-[17px] mt-6 mb-2 text-[#111]">
+              Information Systems
+            </h4>
+            <ul class="list-disc pl-5 text-[#5e5b00] text-[15.5px] space-y-2">
+              <li>CSC-324: Web Application Development</li>
+              <li>CSC-435: Frontend Web Application Frameworks</li>
+              <li>CSC-436: Backend Web Application Frameworks</li>
+              <li>CSC-442: Mobile Application Development</li>
+              <li>CSC-445: Information Systems</li>
+              <li>CSC-452: Introduction to Game Development</li>
+              <li>CSC-454: Introduction to Semantic Web</li>
+              <li>CSC-457: Web Application Frameworks</li>
+              <li>CSC-472: Information Interfaces</li>
+              <li>CSC-476: Enterprise Information Systems</li>
+              <li>CSC-478: Web Technologies</li>
+              <li>CSC-480: Selected topic in CS</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-[17px] mt-6 mb-2 text-[#111]">
+              Networks and Security
+            </h4>
+            <ul class="list-disc pl-5 text-[#5e5b00] text-[15.5px] space-y-2">
+              <li>CSC-412: Introduction to Cyber Security</li>
+              <li>CSC-416: Introduction to Cryptography</li>
+              <li>CSC-443: Network Architecture</li>
+              <li>CSC-446: Introduction to Multimedia Communication</li>
+              <li>CSC-448: Network Management</li>
+              <li>CSC-450: Wireless and Mobile Networks</li>
+              <li>CSC-456: Introduction to Web Services</li>
+              <li>CSC-461: Introduction to Blockchain Technologies</li>
+              <li>CSC-462: Introduction to Cyber Security</li>
+              <li>CSC-480: Selected topic in CS</li>
+              <li>CSC-531: Parallel and Distributed Computing</li>
+              <li>CSC-535: Cloud DevOps</li>
+            </ul>
+          </div>
+
+          <p class="mt-4">
+            <a
+              class="font-semibold text-[15px] text-[#1db954] hover:text-[#065f46] underline"
+              href="https://qau.edu.pk/bachelor-fee-structure/"
+            >
+              Click here to see the details about the fee structure
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <section
+      class="bg-gray-100 py-10 px-5 border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.06)]"
+    >
+      <div class="max-w-[1200px] mx-auto flex flex-wrap justify-between gap-10">
+        <div class="flex-grow flex-shrink basis-[300px]">
+          <h3 class="text-[18px] font-bold text-[#0a1f44] mb-4">
+            Useful links
+          </h3>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <a
+              href="https://qau.edu.pk/"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              QAU
+            </a>
+            <a
+              href="admissions.html"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              Admissions
+            </a>
+            <a
+              href="contact.html"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              Contact
+            </a>
+          </div>
+          <address class="not-italic text-sm text-[#0a1f44] leading-relaxed">
+            <strong>Department of Computer Sciences,</strong><br />
+            Quaid-i-Azam University,<br />
+            Islamabad, 45320, Pakistan<br />
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+
+        <div class="flex-grow flex-shrink basis-[300px]">
+          <h3 class="text-[18px] font-bold text-[#0a1f44] mb-4">
+            Our Programs
+          </h3>
+          <ul>
+            <li class="mb-2">
+              <a
+                href="phd.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                PhD (Computer Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="ms.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MS (Information Science & Technology)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="mphil.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MPhil (Computer Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="ms-data.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MS (Data Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="bs.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                BS (Computer Science)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#047857] text-white text-center py-3 px-2 text-[16px]">
+      <p>2025 &copy Department of Computer Sciences, QAU, Islamabad</p>
+    </footer>
+  </body>
+</html>

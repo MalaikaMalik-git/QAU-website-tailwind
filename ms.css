@@ -1,0 +1,457 @@
+:root {
+  --main-color: #f3f4f6;
+  --text-light: #ffffff;
+  --text-subtle: #e0f2f1;
+  --nav-bg: #0a1f44;
+  --highlight: #1db954;
+  --color: #1f2937;
+  --link-color: #10b981;
+  --hover-color: #065f46;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--main-color);
+  color: #111;
+}
+
+.top-header {
+  position: relative;
+  background-image: url("dep-img1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  padding: 20px;
+}
+
+.blur-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 30, 40, 0.65);
+  z-index: 1;
+}
+
+.top-header-content {
+  z-index: 2;
+  max-width: 1000px;
+}
+
+.top-header-dep {
+  font-size: 40px;
+  font-weight: 800;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 25px;
+}
+.top-header-uni {
+  font-size: 18px;
+  color: var(--text-subtle);
+  font-weight: 400;
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+}
+
+.nav-bar {
+  background-color: var(--nav-bg);
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 0px;
+}
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 6px 10px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--highlight);
+  border-bottom: 2px solid var(--highlight);
+}
+
+.hamburger {
+  font-size: 28px;
+  color: var(--text-light);
+  background: none;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--nav-bg);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 99;
+  transition: right 0.8s ease;
+}
+
+#nav-toggle:checked ~ .sidebar {
+  right: 0;
+}
+
+.close-btn {
+  font-size: 28px;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--text-light);
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 20px;
+}
+.sidebar-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #444;
+  transition: color 0.3s;
+}
+
+.sidebar-links a:hover {
+  color: var(--highlight);
+}
+.academic-main {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  font-family: "Segoe UI", sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.academic-heading {
+  margin-bottom: 40px;
+}
+
+.academic-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--link-color);
+  margin-bottom: 15px;
+}
+
+.academic-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color);
+}
+
+.highlight-box {
+  background-color: #ffffff;
+  border-left: 4px solid var(--link-color);
+  border-radius: 8px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+.highlight-title {
+  color: var(--nav-bg);
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.highlight-box h4 {
+  font-size: 16px;
+  color: #1e293b;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.highlight-box p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.highlight-box ul {
+  margin-left: 20px;
+  padding-left: 10px;
+  list-style: disc;
+}
+
+.highlight-box ul li {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.course-section {
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.course-heading {
+  font-size: 22px;
+  color: var(--nav-bg);
+  font-weight: 700;
+  margin: 40px 0 20px;
+}
+
+.course-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.course-card summary {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 20px;
+  position: relative;
+  color: var(--nav-bg);
+}
+
+.course-card[open] summary {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.course-card summary::marker {
+  display: none;
+}
+
+.course-card summary::after {
+  content: "▸";
+  position: absolute;
+  right: 20px;
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+
+.course-card[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.course-card p {
+  padding: 15px 20px 20px;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.6;
+}
+.reference-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.reference-section h3 {
+  color: var(--nav-bg);
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.reference-link {
+  background-color: #fff;
+  border-left: 4px solid var(--highlight);
+  padding: 12px 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #065f46;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.reference-link:hover {
+  background-color: #ecfdf5;
+  transform: translateY(-2px);
+}
+
+.journal-list {
+  background-color: #ffffff;
+  padding: 24px 20px;
+  border-left: 4px solid var(--nav-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.journal-list p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #1f2937;
+}
+.institutes-section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.institutes-section h3 {
+  font-size: 22px;
+  color: var(--nav-bg);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.institutes-box {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-left: 4px solid var(--highlight);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.institute-list {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.7;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.fee-structure-link {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.fee-structure-link a {
+  color: var(--highlight);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.fee-structure-link a:hover {
+  color: var(--hover-color);
+}
+
+/*footer part*/
+.programs-useful-info-section {
+  background-color: var(--main-color);
+  padding: 40px 20px;
+
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+}
+.programs-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.useful-links,
+.programs-links {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
+}
+.useful-links h3,
+.programs-links h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--nav-bg);
+  margin-bottom: 16px;
+}
+.links {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.links a {
+  background-color: var(--highlight);
+  color: var(--text-subtle);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.links a:hover {
+  background-color: #169447;
+}
+.useful-links address {
+  font-size: 14px;
+  color: var(--nav-bg);
+  line-height: 1.6;
+  font-style: normal;
+}
+
+.programs-links li {
+  margin-bottom: 10px;
+}
+.programs-links a {
+  text-decoration: none;
+  color: #047857;
+
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.programs-links a:hover {
+  color: #065f46;
+  text-decoration: underline;
+}
+.footer {
+  background-color: #047857;
+  color: var(--text-light);
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 16px;
+}
+@media screen and (max-width: 599px) {
+  .nav-bar {
+    display: none;
+  }
+  .top-header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media (max-width: 900px) {
+}

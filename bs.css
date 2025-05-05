@@ -1,0 +1,359 @@
+:root {
+  --main-color: #f3f4f6;
+  --text-light: #ffffff;
+  --text-subtle: #e0f2f1;
+  --nav-bg: #0a1f44;
+  --highlight: #1db954;
+  --color: #1f2937;
+  --link-color: #10b981;
+  --hover-color: #065f46;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--main-color);
+  color: #111;
+}
+
+.top-header {
+  position: relative;
+  background-image: url("dep-img1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  padding: 20px;
+}
+
+.blur-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 30, 40, 0.65);
+  z-index: 1;
+}
+
+.top-header-content {
+  z-index: 2;
+  max-width: 1000px;
+}
+
+.top-header-dep {
+  font-size: 40px;
+  font-weight: 800;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 25px;
+}
+.top-header-uni {
+  font-size: 18px;
+  color: var(--text-subtle);
+  font-weight: 400;
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+}
+
+.nav-bar {
+  background-color: var(--nav-bg);
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 0px;
+}
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 6px 10px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--highlight);
+  border-bottom: 2px solid var(--highlight);
+}
+
+.hamburger {
+  font-size: 28px;
+  color: var(--text-light);
+  background: none;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--nav-bg);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 99;
+  transition: right 0.8s ease;
+}
+
+#nav-toggle:checked ~ .sidebar {
+  right: 0;
+}
+
+.close-btn {
+  font-size: 28px;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--text-light);
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 20px;
+}
+.sidebar-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #444;
+  transition: color 0.3s;
+}
+
+.sidebar-links a:hover {
+  color: var(--highlight);
+}
+.academic-main {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.academic-heading {
+  margin-bottom: 40px;
+}
+
+.academic-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--link-color);
+  margin-bottom: 15px;
+}
+
+.academic-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color);
+}
+.highlight-text {
+  font-weight: 600;
+  font-size: 15.5px;
+  color: green;
+  margin-bottom: 6px;
+}
+
+.highlight-box h4 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.highlight-box ul li {
+  font-size: 15px;
+  color: red;
+  margin-bottom: 6px;
+}
+.highlight-text a {
+  color: green;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.highlight-text a:hover {
+  color: #065f46;
+  text-decoration: underline;
+}
+
+/*footer part*/
+.programs-useful-info-section {
+  background-color: var(--main-color);
+  padding: 40px 20px;
+
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+}
+.programs-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.useful-links,
+.programs-links {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
+}
+.useful-links h3,
+.programs-links h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--nav-bg);
+  margin-bottom: 16px;
+}
+.links {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.links a {
+  background-color: var(--highlight);
+  color: var(--text-subtle);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.links a:hover {
+  background-color: #169447;
+}
+.useful-links address {
+  font-size: 14px;
+  color: var(--nav-bg);
+  line-height: 1.6;
+  font-style: normal;
+}
+
+.programs-links li {
+  margin-bottom: 10px;
+}
+.programs-links a {
+  text-decoration: none;
+  color: #047857;
+
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.programs-links a:hover {
+  color: #065f46;
+  text-decoration: underline;
+}
+.footer {
+  background-color: #047857;
+  color: var(--text-light);
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 16px;
+}
+@media screen and (max-width: 599px) {
+  .nav-bar {
+    display: none;
+  }
+  .top-header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media (max-width: 900px) {
+}
+.highlight-box {
+  background-color: #ffffff;
+  border-left: 4px solid var(--link-color);
+  border-radius: 8px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.highlight-box:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-box h3 {
+  color: var(--nav-bg);
+  font-weight: 700;
+  font-size: 19px;
+  margin-bottom: 16px;
+}
+
+.highlight-box ul {
+  padding-left: 20px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  list-style: disc;
+}
+
+.highlight-box ul li {
+  font-size: 15.5px;
+  margin-bottom: 10px;
+  color: #5e5b00;
+  transition: color 0.3s ease;
+}
+
+.highlight-box ul li a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.highlight-box ul li a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+.highlight-box p {
+  margin-top: 12px;
+  font-size: 15.5px;
+}
+
+.highlight-link {
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--highlight);
+  transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}

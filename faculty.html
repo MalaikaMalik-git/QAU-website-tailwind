@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Computer Science - QAU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #nav-toggle:checked ~ aside {
+        right: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-segoe-ui text-black">
+    <input type="checkbox" id="nav-toggle" class="hidden" />
+
+    <section
+      class="relative h-[300px] bg-cover bg-center bg-no-repeat text-white text-center flex items-center justify-center"
+      style="background-image: url('dep-img1.jpeg')"
+    >
+      <div
+        class="absolute top-0 left-0 h-full w-full bg-[rgba(0,30,40,0.65)] z-[1]"
+      ></div>
+      <div class="z-[2]">
+        <h1
+          class="text-[28px] font-extrabold drop-shadow-[1px_2px_8px_rgba(0,0,0,0.7)]"
+        >
+          Department of Computer Science
+        </h1>
+        <h2 class="text-[16px] mt-[6px] text-teal-100">
+          Quaid-i-Azam University, Islamabad
+        </h2>
+        <label
+          for="nav-toggle"
+          class="absolute top-4 right-5 text-white text-[28px] cursor-pointer block md:hidden"
+          >&#9776;</label
+        >
+      </div>
+    </section>
+
+    <aside
+      class="fixed top-0 right-[-100%] w-full h-screen bg-[#0a1f44] text-white flex flex-col p-5 z-[99] transition-all duration-[800ms] ease-in-out"
+      id="sidebar"
+    >
+      <label
+        for="nav-toggle"
+        class="text-[28px] ml-auto cursor-pointer p-2 text-white"
+        >&times;</label
+      >
+      <nav class="flex flex-col mt-10 gap-5">
+        <a
+          href="index.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Home</a
+        >
+        <a
+          href="academics.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Academics</a
+        >
+        <a
+          href="research.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Research</a
+        >
+        <a
+          href="fundedProjects.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Funded Projects</a
+        >
+        <a
+          href="admissions.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Admissions</a
+        >
+        <a
+          href="faculty.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Faculty</a
+        >
+        <a
+          href="https://gdg.community.dev/quaid-i-azam-university/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Google GDSC</a
+        >
+        <a
+          href="https://jobs.qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Jobs</a
+        >
+        <a
+          href="http://alumni.cs.qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Alumni</a
+        >
+        <a
+          href="https://qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >QAU</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Contact Us</a
+        >
+      </nav>
+    </aside>
+
+    <header class="bg-[#0a1f44] py-2 px-5 hidden md:block">
+      <nav class="flex flex-wrap justify-center gap-x-4 gap-y-0">
+        <a
+          href="index.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Home</a
+        >
+        <a
+          href="academics.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Academics</a
+        >
+        <a
+          href="research.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Research</a
+        >
+        <a
+          href="fundedProjects.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Funded Projects</a
+        >
+        <a
+          href="admissions.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Admissions</a
+        >
+        <a
+          href="faculty.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Faculty</a
+        >
+        <a
+          href="https://gdg.community.dev/quaid-i-azam-university/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Google GDSC</a
+        >
+        <a
+          href="https://jobs.qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Jobs</a
+        >
+        <a
+          href="http://alumni.cs.qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Alumni</a
+        >
+        <a
+          href="https://qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >QAU</a
+        >
+        <a
+          href="contact.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Contact Us</a
+        >
+      </nav>
+    </header>
+    <section class="max-w-screen-xl mx-auto mt-16 px-5">
+      <div class="mb-10">
+        <img
+          src="faculty-img.jpg"
+          alt="Faculty Group"
+          class="w-full h-auto rounded-xl shadow-lg"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">Dr. Onaiza Maqbool</h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-blue-900"
+              >Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Software Reengineering</li>
+              <li>Software Architecture Recovery</li>
+              <li>Program Understanding</li>
+              <li>Machine Learning</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> onaiza [at]
+                qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2060
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">Dr. Khalid Saleem</h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-green-600"
+              >Associate Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Database Systems</li>
+              <li>Information Systems</li>
+              <li>Distributed Systems</li>
+              <li>Data Warehousing & Mining</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> ksaleem [at]
+                qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2061
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">Dr. Ayyaz Hussain</h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-yellow-700"
+              >Chairperson</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Pattern Recognition</li>
+              <li>Image Processing</li>
+              <li>Computational Intelligence</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i>
+                ayyaz.hussain [at] qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2059
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">Dr. Shoaib Karim</h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-purple-700"
+              >Assistant Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Usability / Accessibility of Interactive Systems</li>
+              <li>Web Engineering</li>
+              <li>Applied aspects of ontologies</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> skarim [at]
+                qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2055
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">
+              Dr. Rabeeh Ayaz Abbasi
+            </h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-blue-900"
+              >Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Social Computing</li>
+              <li>Network Science</li>
+              <li>Data Science</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> rabbasi [at]
+                qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2050
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">
+              Dr. Muazzam A Khan Khattak
+            </h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-blue-900"
+              >Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Internet of Things, Next Generation Intelligent Networks</li>
+              <li>Block Chain Based Information and Network Security</li>
+              <li>Vehicular Ad-hoc and Sensor Actor Networks</li>
+              <li>Acoustic and Multimedia Networks</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i>
+                muazzam.khattak [at] qau [dot] edu [dot] pk
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">
+              Dr. Ghazanfar Farooq Siddiqui
+            </h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-green-600"
+              >Associate Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Agents (Virtual Agents)</li>
+              <li>Modeling and Simulation</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> ghazanfar
+                [at] qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2058
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">
+              Dr. Muddassar Azam Sindhu
+            </h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-blue-900"
+              >Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Software Testing</li>
+              <li>Model Mining</li>
+              <li>Formal Methods</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> masindhu
+                [at] qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2066
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">
+              Dr. Akmal Saeed Khattak
+            </h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-green-600"
+              >Associate Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Information Retrieval</li>
+              <li>Machine Learning</li>
+              <li>Text Mining</li>
+              <li>Natural Language Processing</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> akhattak
+                [at] qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2161
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">Dr. Umer Rasheed</h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-green-600"
+              >Associate Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Multimedia Information Retrieval</li>
+              <li>Human Aspects of Computing</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> ummerrashid
+                [at] qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2012
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">Dr. S. M. Naqi</h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-purple-700"
+              >Assistant Professor</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Medical Imaging</li>
+              <li>Machine Learning</li>
+              <li>Image Segmentation and Classification</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> smnaqi [at]
+                qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2013
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">Ifrah Farrukh Khan</h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-blue-600"
+              >Lecturer</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Database Systems</li>
+              <li>Networking</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> smnaqi [at]
+                qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2013
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/85 backdrop-blur-md border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="text-blue-900 mb-1 text-lg mr-1">
+              Memoona Afsheen Malik
+            </h3>
+            <span
+              class="text-xs px-2.5 py-1 rounded-full font-semibold text-white bg-blue-600"
+              >Lecturer</span
+            >
+          </div>
+          <div>
+            <h4 class="text-sm text-green-500 my-2">Research Interests</h4>
+            <ul class="pl-5 text-sm leading-relaxed text-gray-800">
+              <li>Problem Solving and Programming</li>
+              <li>Data Structures and Algorithms</li>
+            </ul>
+            <div class="mt-4 text-xs text-green-900">
+              <p>
+                <i class="fas fa-envelope mr-2 text-green-500"></i> memoona [at]
+                qau [dot] edu [dot] pk
+              </p>
+              <p>
+                <i class="fas fa-phone mr-2 text-green-500"></i> +92-51-9064
+                2064
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-gray-100 py-10 px-5 border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.06)]"
+    >
+      <div class="max-w-[1200px] mx-auto flex flex-wrap justify-between gap-10">
+        <div class="flex-grow flex-shrink basis-[300px]">
+          <h3 class="text-[18px] font-bold text-[#0a1f44] mb-4">
+            Useful links
+          </h3>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <a
+              href="https://qau.edu.pk/"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              QAU
+            </a>
+            <a
+              href="admissions.html"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              Admissions
+            </a>
+            <a
+              href="contact.html"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              Contact
+            </a>
+          </div>
+          <address class="not-italic text-sm text-[#0a1f44] leading-relaxed">
+            <strong>Department of Computer Sciences,</strong><br />
+            Quaid-i-Azam University,<br />
+            Islamabad, 45320, Pakistan<br />
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+
+        <div class="flex-grow flex-shrink basis-[300px]">
+          <h3 class="text-[18px] font-bold text-[#0a1f44] mb-4">
+            Our Programs
+          </h3>
+          <ul>
+            <li class="mb-2">
+              <a
+                href="phd.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                PhD (Computer Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="ms.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MS (Information Science & Technology)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="mphil.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MPhil (Computer Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="ms-data.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MS (Data Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="bs.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                BS (Computer Science)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#047857] text-white text-center py-3 px-2 text-[16px]">
+      <p>2025 &copy Department of Computer Sciences, QAU, Islamabad</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Computer Science - QAU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #nav-toggle:checked ~ aside {
+        right: 0;
+      }
+
+      @keyframes slide-left {
+        0%,
+        10% {
+          transform: translateX(0%);
+        }
+        15%,
+        25% {
+          transform: translateX(-100%);
+        }
+        30%,
+        40% {
+          transform: translateX(-200%);
+        }
+        45%,
+        55% {
+          transform: translateX(-300%);
+        }
+        60%,
+        70% {
+          transform: translateX(-400%);
+        }
+        75%,
+        85% {
+          transform: translateX(-500%);
+        }
+        90%,
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      /* Respect Stop Toggle */
+      #stop-toggle:checked ~ section .slides {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-segoe-ui text-black">
+    <input type="checkbox" id="nav-toggle" class="hidden" />
+
+    <section
+      class="relative h-[300px] bg-cover bg-center bg-no-repeat text-white text-center flex items-center justify-center"
+      style="background-image: url('dep-img1.jpeg')"
+    >
+      <div
+        class="absolute top-0 left-0 h-full w-full bg-[rgba(0,30,40,0.65)] z-[1]"
+      ></div>
+      <div class="z-[2]">
+        <h1
+          class="text-[28px] font-extrabold drop-shadow-[1px_2px_8px_rgba(0,0,0,0.7)]"
+        >
+          Department of Computer Science
+        </h1>
+        <h2 class="text-[16px] mt-[6px] text-teal-100">
+          Quaid-i-Azam University, Islamabad
+        </h2>
+        <label
+          for="nav-toggle"
+          class="absolute top-4 right-5 text-white text-[28px] cursor-pointer block md:hidden"
+          >&#9776;</label
+        >
+      </div>
+    </section>
+
+    <aside
+      class="fixed top-0 right-[-100%] w-full h-screen bg-[#0a1f44] text-white flex flex-col p-5 z-[99] transition-all duration-[800ms] ease-in-out"
+      id="sidebar"
+    >
+      <label
+        for="nav-toggle"
+        class="text-[28px] ml-auto cursor-pointer p-2 text-white"
+        >&times;</label
+      >
+      <nav class="flex flex-col mt-10 gap-5">
+        <a
+          href="index.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Home</a
+        >
+        <a
+          href="academics.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Academics</a
+        >
+        <a
+          href="research.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Research</a
+        >
+        <a
+          href="fundedProjects.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Funded Projects</a
+        >
+        <a
+          href="admissions.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Admissions</a
+        >
+        <a
+          href="faculty.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Faculty</a
+        >
+        <a
+          href="https://gdg.community.dev/quaid-i-azam-university/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Google GDSC</a
+        >
+        <a
+          href="https://jobs.qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Jobs</a
+        >
+        <a
+          href="http://alumni.cs.qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Alumni</a
+        >
+        <a
+          href="https://qau.edu.pk/"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >QAU</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-[20px] pb-2 border-b border-gray-700 hover:text-[#1db954]"
+          >Contact Us</a
+        >
+      </nav>
+    </aside>
+
+    <header class="bg-[#0a1f44] py-2 px-5 hidden md:block">
+      <nav class="flex flex-wrap justify-center gap-x-4 gap-y-0">
+        <a
+          href="index.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Home</a
+        >
+        <a
+          href="academics.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Academics</a
+        >
+        <a
+          href="research.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Research</a
+        >
+        <a
+          href="fundedProjects.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Funded Projects</a
+        >
+        <a
+          href="admissions.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Admissions</a
+        >
+        <a
+          href="faculty.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Faculty</a
+        >
+        <a
+          href="https://gdg.community.dev/quaid-i-azam-university/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Google GDSC</a
+        >
+        <a
+          href="https://jobs.qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Jobs</a
+        >
+        <a
+          href="http://alumni.cs.qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Alumni</a
+        >
+        <a
+          href="https://qau.edu.pk/"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >QAU</a
+        >
+        <a
+          href="contact.html"
+          class="text-white px-2 py-1 font-medium hover:text-[#1db954] hover:border-b-2 border-[#1db954]"
+          >Contact Us</a
+        >
+      </nav>
+    </header>
+
+    <section
+      class="max-w-[1000px] px-5 py-6 mx-auto leading-relaxed text-gray-800"
+    >
+      <h2
+        class="text-[18px] font-bold text-[#047857] border-b border-gray-300 pb-[6px] mt-[30px] mb-[15px]"
+      >
+        Important Documents
+      </h2>
+      <ul class="list-disc list-inside mb-6 text-[14px]">
+        <li>
+          <a
+            href="https://cs.qau.edu.pk/doc/timetable.pdf"
+            class="text-[#1db954] font-medium no-underline hover:text-[#065f46] hover:border-b border-dashed border-[#065f46]"
+            >Time Table</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://cs.qau.edu.pk/doc/timetable.pdf"
+            class="text-[#1db954] font-medium no-underline hover:text-[#065f46] hover:border-b border-dashed border-[#065f46]"
+            >Semester Schedule</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://cs.qau.edu.pk/doc/university-facilities.pdf"
+            class="text-[#1db954] font-medium no-underline hover:text-[#065f46] hover:border-b border-dashed border-[#065f46]"
+            >University Facilities</a
+          >
+        </li>
+      </ul>
+
+      <h2
+        class="text-[18px] font-bold text-[#047857] border-b border-gray-300 pb-[6px] mt-[30px] mb-[15px]"
+      >
+        Latest News
+      </h2>
+      <ul class="list-disc list-inside text-[14px]">
+        <li>
+          Quaid-i-Azam University in "Computer Science and Information Systems"
+          ranked <strong>301–350</strong> worldwide and
+          <strong>third</strong> nationally by
+          <a
+            href="https://www.topuniversities.com/university-subject-rankings/computer-science-information-systems"
+            class="text-[#1db954] font-medium no-underline hover:text-[#065f46] hover:border-b border-dashed border-[#065f46]"
+            >QS Rankings 2025</a
+          >
+        </li>
+        <li>
+          Seminar on
+          <a
+            href="https://www.facebook.com/story.php?story_fbid=705090698458911&id=100068739602961"
+            class="text-[#1db954] font-medium no-underline hover:text-[#065f46] hover:border-b border-dashed border-[#065f46]"
+            >Entrepreneurial and Growth Dynamics in the Tech Landscape</a
+          >
+          by Usman Asif, CEO, DevSinc
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/QAUCSAlumniOfficial/"
+            class="text-[#1db954] font-medium no-underline hover:text-[#065f46] hover:border-b border-dashed border-[#065f46]"
+            >CS Alumni Annual Event 2024</a
+          >
+          was held on Feb 25, 2024 in Islamabad Club
+        </li>
+        <li>
+          <a
+            href="https://qau.edu.pk/qauob/#orientation-booklet/page1"
+            class="text-[#1db954] font-medium no-underline hover:text-[#065f46] hover:border-b border-dashed border-[#065f46]"
+            >QAU Orientation Booklet 2023-2024</a
+          >
+          has been published
+        </li>
+        <li>
+          Students from CS Dept got first positions in On Spot Programming and
+          Hackathon competitions in the 8th ExcITE Cup organized by CUST,
+          Islamabad
+        </li>
+      </ul>
+    </section>
+
+    <input type="checkbox" id="stop-toggle" class="hidden" />
+
+    <section
+      class="w-full max-w-[1200px] h-[350px] mx-auto my-8 overflow-hidden relative rounded-[20px] shadow-lg flex items-center justify-center bg-gradient-to-br from-[#e0f7ef] via-[#b3e5cc] to-[#e0f7ef] transition-transform duration-500 hover:scale-[1.01] sm:h-[200px] md:h-[250px]"
+    >
+      <div
+        class="flex h-full items-center w-[700%] animate-[slide-left_35s_ease-in-out_infinite]"
+      >
+        <div class="flex-none w-full flex justify-center items-center h-full">
+          <img
+            src="dep-img1.jpeg"
+            alt="Campus Image 1"
+            class="h-full w-auto object-cover block"
+          />
+        </div>
+        <div class="flex-none w-full flex justify-center items-center h-full">
+          <img
+            src="dep-img2.jpg"
+            alt="Campus Image 2"
+            class="h-full w-auto object-cover block"
+          />
+        </div>
+        <div class="flex-none w-full flex justify-center items-center h-full">
+          <img
+            src="dep-img3.jpeg"
+            alt="Campus Image 3"
+            class="h-full w-auto object-cover block"
+          />
+        </div>
+        <div class="flex-none w-full flex justify-center items-center h-full">
+          <img
+            src="dep-img4.jpeg"
+            alt="Campus Image 4"
+            class="h-full w-auto object-cover block"
+          />
+        </div>
+        <div class="flex-none w-full flex justify-center items-center h-full">
+          <img
+            src="dep-img5.jpeg"
+            alt="Campus Image 5"
+            class="h-full w-auto object-cover block"
+          />
+        </div>
+        <div class="flex-none w-full flex justify-center items-center h-full">
+          <img
+            src="dep-img6.jpeg"
+            alt="Campus Image 6xs"
+            class="h-full w-auto object-cover block"
+          />
+        </div>
+        <div class="flex-none w-full flex justify-center items-center h-full">
+          <img
+            src="img1.jpeg"
+            alt="Campus Image 7"
+            class="h-full w-auto object-cover block"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="flex justify-center my-6">
+      <label
+        for="stop-toggle"
+        class="px-5 py-2 bg-[#1db954] text-white font-bold rounded-md cursor-pointer text-center hover:bg-[#169447] transition"
+        >Stop Animation</label
+      >
+    </div>
+
+    <section class="px-5 py-16 max-w-[1200px] mx-auto leading-8 text-[#1f2937]">
+      <div class="mb-10">
+        <h2 class="mb-2 text-[#0a1f44] text-xl font-semibold">Introduction</h2>
+        <p class="text-[15px] mb-10">
+          The Department of Computer Sciences at Quaid-i-Azam University is
+          considered as one of the best computer science departments in
+          Pakistan. The department is ranked among the top 3 departments in the
+          country as per QS and Times Higher Education (THE) rankings. It was
+          established at Quaid-i-Azam University Islamabad in 1976. The main
+          objective of the department is to produce Computer Scientists in order
+          to meet the growing demand for computer professionals in the country.
+          All the programs have been highly successful. Department graduates
+          have attained higher degrees from developed countries and are working
+          in national and international organizations. The department offers PhD
+          (Computer Science), MPhil (Computer Science), MS (Information Science
+          & Technology), MS (Data Science), and BS (Computer Science) degrees.
+          Each degree program has a specific objective and focus. The course of
+          study and syllabus for each degree is updated and is inline with its
+          objectives.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="mb-2 text-[#0a1f44] text-xl font-semibold">Research</h2>
+        <div
+          class="flex flex-wrap justify-center items-center gap-5 md:flex-row flex-col"
+        >
+          <div
+            class="flex-1 md:basis-[30%] w-full bg-white p-4 rounded-xl shadow-md border-t-[5px] border-[#1db954] flex flex-col transition-transform hover:-translate-y-1"
+          >
+            <img
+              src="network.jpg"
+              alt="Human Information Interaction"
+              class="h-[140px] w-auto object-contain rounded mb-5 mx-auto"
+            />
+            <h3
+              class="text-lg font-semibold text-[#0a1f44] mb-2 text-center md:text-left"
+            >
+              Human Information Interaction
+            </h3>
+            <p class="text-sm text-center md:text-left">
+              Investigates all aspects of information usage by humans. Research
+              focus varies for information seeking behavior, Information
+              Interaction Techniques, Storage and Retrieval models/frameworks
+              for structured and unstructured information, and information
+              services for human information needs.
+            </p>
+          </div>
+
+          <div
+            class="flex-1 md:basis-[30%] w-full bg-white p-4 rounded-xl shadow-md border-t-[5px] border-[#1db954] flex flex-col transition-transform hover:-translate-y-1"
+          >
+            <img
+              src="cloud.jpg"
+              alt="Knowledge Engineering"
+              class="h-[140px] w-auto object-contain rounded mb-5 mx-auto"
+            />
+            <h3
+              class="text-lg font-semibold text-[#0a1f44] mb-2 text-center md:text-left"
+            >
+              Knowledge Engineering
+            </h3>
+            <p class="text-sm text-center md:text-left">
+              Focuses on analyze of data, metadata and knowledge using
+              supervised and unsupervised mining algorithms. The target areas
+              will be software architecture, web services and overlay networks.
+              The main goal is to process related and uncorrelated facts and
+              extract meaningful contextual knowledge for quality decision
+              making.
+            </p>
+          </div>
+
+          <div
+            class="flex-1 md:basis-[30%] w-full bg-white p-4 rounded-xl shadow-md border-t-[5px] border-[#1db954] flex flex-col transition-transform hover:-translate-y-1"
+          >
+            <img
+              src="database.jpg"
+              alt="Networking and Communication"
+              class="h-[140px] w-auto object-contain rounded mb-5 mx-auto"
+            />
+            <h3
+              class="text-lg font-semibold text-[#0a1f44] mb-2 text-center md:text-left"
+            >
+              Networking and Communication
+            </h3>
+            <p class="text-sm text-center md:text-left">
+              This group investigates the applied aspects in the domains of
+              networking, communication, security and privacy. The research
+              group focuses on a number of areas including but not limited to
+              computer networks, distributed systems, mobile Agent-based
+              distributed systems, routing protocols, peer-to-peer computing,
+              security and privacy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="bg-gray-100 py-10 px-5 border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.06)]"
+    >
+      <div class="max-w-[1200px] mx-auto flex flex-wrap justify-between gap-10">
+        <div class="flex-grow flex-shrink basis-[300px]">
+          <h3 class="text-[18px] font-bold text-[#0a1f44] mb-4">
+            Useful links
+          </h3>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <a
+              href="https://qau.edu.pk/"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              QAU
+            </a>
+            <a
+              href="admissions.html"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              Admissions
+            </a>
+            <a
+              href="contact.html"
+              class="bg-[#1db954] text-teal-100 text-sm font-medium px-3 py-1 rounded-full hover:bg-[#169447] transition"
+            >
+              Contact
+            </a>
+          </div>
+          <address class="not-italic text-sm text-[#0a1f44] leading-relaxed">
+            <strong>Department of Computer Sciences,</strong><br />
+            Quaid-i-Azam University,<br />
+            Islamabad, 45320, Pakistan<br />
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+
+        <div class="flex-grow flex-shrink basis-[300px]">
+          <h3 class="text-[18px] font-bold text-[#0a1f44] mb-4">
+            Our Programs
+          </h3>
+          <ul>
+            <li class="mb-2">
+              <a
+                href="phd.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                PhD (Computer Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="ms.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MS (Information Science & Technology)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="mphil.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MPhil (Computer Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="ms-data.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                MS (Data Science)
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="bs.html"
+                class="text-[#047857] font-medium hover:text-[#065f46] underline-offset-2 hover:underline"
+              >
+                BS (Computer Science)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#047857] text-white text-center py-3 px-2 text-[16px]">
+      <p>2025 &copy; Department of Computer Sciences, QAU, Islamabad</p>
+    </footer>
+  </body>
+</html>
