@@ -2,7 +2,7 @@
 
 A responsive, single-page website built with **HTML5 + talwindCSS** (Flexbox & Grid) and a sprinkle of **vanilla JavaScript** to showcase the Department of Computer Science at Quaid-i-Azam University.
 
-> **Live demo:** https://qau-website-css-html.vercel.app/
+> **Live demo:** https://qau-website-tailwind.vercel.app/
 
 ---
 
